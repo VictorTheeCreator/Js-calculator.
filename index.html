@@ -1,0 +1,111 @@
+<!--Web Calculator By Victor Faruna----->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Calculator</title>
+  <link rel="stylesheet" href="light.css">
+  <script src="converter.js">converter.js</script>
+  <script src="calculator.js" async></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="menu">
+       <span onclick="changeTheme()">🌘</span> &nbsp; &nbsp;<span onclick="toggleCurConv()">💱</span> &nbsp; &nbsp;<span>⚙️</span>
+      </div>
+    </header>
+  <div class="display">
+    <input disabled maxlength="9" class="input" value="0">
+  </div>
+  
+  <div class="keypad">
+    <div class="num-cont">
+      <div onclick="clearValue()" class="numbers control">
+        C
+      </div>
+      <div onclick="input('/')" class="numbers control">
+        ÷
+      </div>
+      <div onclick="input('*')" class="numbers control">
+        ×
+      </div>
+      <div onclick="cancel()" class="numbers control"><~</div>
+      <div onclick="input('7')" class="numbers" id="seven">
+        7 start
+      </div>
+      <div onclick="input('8')" class="numbers" id="eight">
+        8
+      </div>
+      <div onclick="input('9')" class="numbers" id="nine">
+        9
+      </div>
+      <div onclick="input('-')" class="numbers control">
+        _
+      </div>
+      <div onclick="input('4')" class="numbers" id="four">
+        4 
+      </div>
+      <div onclick="input('5')" class="numbers" id="five">
+        5
+      </div>
+      <div onclick="input('6')" class="numbers" id="six">
+        6
+      </div>
+      <div onclick="input('+')" class="numbers control">
+        +
+      </div>
+      <div onclick="input('1')" class="numbers" id="one">
+        1
+      </div>
+      <div onclick="input('2')" class="numbers" id="two">
+        2
+      </div>
+      <div onclick="input('3')" class="numbers" id="three">
+        3
+      </div>
+      <div onclick="result()" class="numbers control">
+        =
+      </div>
+      <div onclick="input('%')" class="numbers">
+        %
+      </div>
+      <div onclick="input('0')" class="numbers">
+        0
+      </div>
+      <div onclick="input('.')" class="numbers">
+        .
+      </div>
+    </div>
+  </div>
+  
+  
+  <section class="cur-conv-cont">
+    <div class="back" onclick="closeCurConv()">
+    </div>
+    
+    <select oninput="convert()" id="country1">
+      <option value="usd">🇺🇸 USD</option>
+      <option value="ngr">🇳🇬 NGR</option>
+      <option value="gbp">🇬🇧 GBP</option>
+    </select>
+    <input id="input1" type="number" placeholder="" value="1"><br><br>
+   
+    <select oninput="convert()" id="country2">
+      <option value="ngr">🇬🇧 GBP</option>
+      <option value="ngr">🇳🇬 NGR</option>
+      <option value="usd">🇺🇸 USD</option>
+    </select>
+    <input id="input2" type="number" placeholder="" disabled><br><br>
+    
+    <select oninput="convert()" name="" id="country3">
+      <option value="ngr">🇳🇬 NGR</option>
+      <option value="usd">🇺🇸 USD</option>
+      <option value="gbp">🇬🇧 GBP</option>
+    </select>
+    <input id="input3" type="number" placeholder="" disabled><br><br>''
+  </section>
+  </main>
+</body>
+</html>
